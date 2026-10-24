@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jinnah Dental Aesthetics — Saddar, Rawalpindi</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#16302b;background:#f4f8f7;line-height:1.6}
+  .topbar{background:#0d3b33;color:#cfe8e1;font-size:13px;padding:8px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  header{background:#fff;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .logo{font-size:22px;font-weight:800;color:#0d3b33;letter-spacing:.3px}
+  .logo span{color:#d9a441}
+  nav a{margin:0 10px;color:#33544d;text-decoration:none;font-weight:600;font-size:14px}
+  .callbtn{background:#0d3b33;color:#fff;padding:10px 18px;border-radius:30px;text-decoration:none;font-weight:700;font-size:14px}
+  .hero{background:linear-gradient(120deg,#0d3b33 0%,#14695a 60%,#1d8a74 100%);color:#fff;padding:64px 20px;text-align:center}
+  .hero h1{font-size:42px;line-height:1.15;max-width:720px;margin:0 auto 14px}
+  .hero p{max-width:620px;margin:0 auto 24px;color:#d6ece6;font-size:17px}
+  .hero a{background:#d9a441;color:#1c2b27;padding:13px 26px;border-radius:30px;text-decoration:none;font-weight:800}
+  .wrap{max-width:1060px;margin:0 auto;padding:44px 20px}
+  h2{font-size:28px;color:#0d3b33;margin-bottom:6px}
+  .sub{color:#5c736c;margin-bottom:26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 4px 18px rgba(13,59,51,.07)}
+  .card h3{color:#0d3b33;font-size:17px;margin-bottom:6px}
+  .card p{color:#5c736c;font-size:14px}
+  .tag{display:inline-block;background:#e7f2ee;color:#0d3b33;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+  .doctors{background:#eaf3f0}
+  .doc{background:#fff;border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start;box-shadow:0 4px 18px rgba(13,59,51,.07)}
+  .avatar{width:64px;height:64px;border-radius:50%;background:#0d3b33;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;flex-shrink:0}
+  .visit{background:#0d3b33;color:#fff;border-radius:20px;padding:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .visit h3{color:#d9a441;margin-bottom:6px}
+  .visit p{color:#d6ece6;font-size:14px}
+  footer{text-align:center;color:#7d938c;font-size:13px;padding:24px}
+  /* Chat widget */
+  #chatBtn{position:fixed;right:22px;bottom:22px;z-index:50;background:#0d3b33;color:#fff;border:none;border-radius:50px;padding:15px 22px;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(13,59,51,.35);animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 10px 30px rgba(13,59,51,.35)}50%{box-shadow:0 10px 34px rgba(217,164,65,.55)}100%{box-shadow:0 10px 30px rgba(13,59,51,.35)}}
+  #chatPanel{position:fixed;right:22px;bottom:92px;z-index:50;width:360px;max-width:calc(100vw - 32px);height:520px;max-height:calc(100vh - 120px);background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.25);display:none;flex-direction:column;overflow:hidden}
+  #chatPanel.open{display:flex}
+  .chatHead{background:#0d3b33;color:#fff;padding:16px 18px}
+  .chatHead b{font-size:16px}
+  .chatHead span{font-size:12px;color:#cfe8e1;display:block;margin-top:2px}
+  #chatBody{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#f6f9f8}
+  .msg{max-width:85%;padding:11px 14px;border-radius:16px;font-size:14px;line-height:1.5}
+  .msg.bot{background:#fff;border:1px solid #e2ebe8;align-self:flex-start;border-bottom-left-radius:4px}
+  .msg.user{background:#0d3b33;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+  .lead{background:#fff8e6;border:1px solid #ecd9a0;border-radius:14px;padding:14px;font-size:14px;align-self:stretch}
+  .lead b{color:#0d3b33}
+  #chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;border-top:1px solid #e6efec;background:#fff}
+  #chips button{background:#e7f2ee;border:1px solid #cfe0d9;color:#0d3b33;border-radius:20px;padding:7px 12px;font-size:12.5px;font-weight:600;cursor:pointer}
+  .chatInput{display:flex;border-top:1px solid #e6efec}
+  .chatInput input{flex:1;border:none;padding:14px;font-size:14px;outline:none}
+  .chatInput button{background:#d9a441;border:none;padding:0 20px;font-weight:800;cursor:pointer;color:#1c2b27}
+  @media(max-width:600px){.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>Jinnah Memorial Hospital, 2 Rashid Minhas Road, Saddar, Rawalpindi</span><span>Call: 0334 8533306</span></div>
+<header>
+  <div class="logo">JINNAH <span>DENTAL</span> AESTHETICS</div>
+  <nav><a href="#dental">Dental</a><a href="#skin">Skin &amp; Aesthetics</a><a href="#doctors">Our Doctors</a><a href="#visit">Visit Us</a></nav>
+  <a class="callbtn" href="tel:03348533306">Call 0334 8533306</a>
+</header>
+<section class="hero">
+  <h1>Healthy smiles, confident skin — under one roof in Saddar.</h1>
+  <p>From routine dental care to implants, braces and advanced skin aesthetics — planned and delivered by experienced doctors.</p>
+  <a href="#visit">Plan Your Visit</a>
+</section>
+<div class="wrap" id="dental">
+  <h2>Dental Care</h2>
+  <p class="sub">Complete dental treatment for the whole family, from check-ups to full smile restoration.</p>
+  <div class="grid">
+    <div class="card"><span class="tag">DENTAL</span><h3>OPD Check-up</h3><p>Walk in for a general oral check-up — no appointment needed for OPD.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Scaling &amp; Polishing</h3><p>Professional cleaning for healthier gums and a fresher smile.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Fillings</h3><p>Natural-looking restoration for decayed or damaged teeth.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Root Canal Treatment</h3><p>Pain-relieving treatment that saves your natural tooth.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Braces</h3><p>Teeth alignment for children, teens and adults.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Dental Implants</h3><p>Permanent, natural-feeling replacement for missing teeth.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Crowns &amp; Bridges</h3><p>Restore strength and appearance of damaged teeth.</p></div>
+    <div class="card"><span class="tag">DENTAL</span><h3>Dentures &amp; Extractions</h3><p>Comfortable dentures and safe, gentle extractions.</p></div>
+  </div>
+</div>
+<div class="wrap" id="skin">
+  <h2>Skin &amp; Aesthetics</h2>
+  <p class="sub">Doctor-led aesthetic treatments, tailored to your skin and your goals.</p>
+  <div class="grid">
+    <div class="card"><span class="tag">AESTHETIC</span><h3>Botox &amp; Fillers</h3><p>Soften lines and restore natural facial volume.</p></div>
+    <div class="card"><span class="tag">AESTHETIC</span><h3>HydraFacial</h3><p>Deep cleansing and hydration for an instant glow.</p></div>
+    <div class="card"><span class="tag">AESTHETIC</span><h3>PRP — Hair &amp; Face</h3><p>Your own platelets, used to support hair growth and skin repair.</p></div>
+    <div class="card"><span class="tag">AESTHETIC</span><h3>Thread Lift</h3><p>Non-surgical lifting and tightening.</p></div>
+    <div class="card"><span class="tag">AESTHETIC</span><h3>Microneedling</h3><p>Collagen-stimulating treatment for texture and scars.</p></div>
+    <div class="card"><span class="tag">AESTHETIC</span><h3>Chemical Peel</h3><p>Resurfacing peels for tone, clarity and brightness.</p></div>
+  </div>
+</div>
+<div class="wrap doctors" id="doctors">
+  <h2>Meet Our Doctors</h2>
+  <p class="sub">Experienced clinicians across dentistry and aesthetics.</p>
+  <div class="grid">
+    <div class="doc"><div class="avatar">AS</div><div><h3>Dr. Ameer Shoaib</h3><p>Maxillofacial Surgery &amp; Dental Implants</p></div></div>
+    <div class="doc"><div class="avatar">AS</div><div><h3>Dr. Areeba Shahid</h3><p>Restorative Dentistry &amp; Aesthetic Physician</p></div></div>
+  </div>
+</div>
+<div class="wrap" id="visit">
+  <div class="visit">
+    <div><h3>Visit Us</h3><p>Jinnah Memorial Hospital, 2 Rashid Minhas Road, Saddar, Rawalpindi.</p></div>
+    <div><h3>Call Us</h3><p>0334 8533306</p></div>
+    <div><h3>OPD</h3><p>Walk in for OPD — no appointment needed. For a planned visit, ask the assistant below and the team will confirm.</p></div>
+  </div>
+</div>
+<footer>Jinnah Dental Aesthetics, Saddar, Rawalpindi &middot; This is a live preview of how a chat assistant would work on the clinic website.</footer>
+
+<button id="chatBtn" onclick="toggleChat()">Chat with Jinnah Dental</button>
+<div id="chatPanel">
+  <div class="chatHead"><b>Jinnah Dental Assistant</b><span>Replies instantly &middot; usually responds in seconds</span></div>
+  <div id="chatBody"></div>
+  <div id="chips"></div>
+  <div class="chatInput"><input id="chatInput" placeholder="Type your question..." onkeydown="if(event.key==='Enter')sendMsg()"><button onclick="sendMsg()">Send</button></div>
+</div>
+<script>
+var body=document.getElementById('chatBody'), chips=document.getElementById('chips'), input=document.getElementById('chatInput');
+var step=null, lead={};
+var mainChips=['Our services','Our doctors','Visit & location','Book a visit','Treatment prices'];
+function toggleChat(){var p=document.getElementById('chatPanel');p.classList.toggle('open');if(p.classList.contains('open')&&!body.children.length){welcome();}}
+function welcome(){bot('Assalam-o-Alaikum! Welcome to Jinnah Dental Aesthetics, Saddar, Rawalpindi. I can help with our dental and skin treatments, our doctors, and booking a visit. What would you like to know?');setChips(mainChips);}
+function bot(t){var d=document.createElement('div');d.className='msg bot';d.textContent=t;body.appendChild(d);body.scrollTop=body.scrollHeight;}
+function user(t){var d=document.createElement('div');d.className='msg user';d.textContent=t;body.appendChild(d);body.scrollTop=body.scrollHeight;}
+function setChips(list){chips.innerHTML='';list.forEach(function(c){var b=document.createElement('button');b.textContent=c;b.onclick=function(){sendMsg(c);};chips.appendChild(b);});}
+function sendMsg(preset){var t=preset||input.value.trim();if(!t)return;input.value='';user(t);setTimeout(function(){handle(t);},350);}
+function ask(q,ch){bot(q);if(ch)setChips(ch);}
+function finishLead(){
+  var ref='JD-001';
+  var d=document.createElement('div');d.className='lead';
+  d.innerHTML='<b>Visit request saved — Ref '+ref+'</b><br>Service: '+lead.service+'<br>Name: '+lead.name+'<br>Phone: '+lead.phone+'<br>Preferred day: '+lead.day+'<br><br>Our team will call you on '+lead.phone+' to confirm your visit. For OPD you can also simply walk in — no appointment needed.';
+  body.appendChild(d);body.scrollTop=body.scrollHeight;
+  step=null;lead={};setChips(mainChips);
+}
+function handle(raw){
+  var t=raw.toLowerCase();
+  if(step==='service'){lead.service=raw;step='name';ask('Thank you. What is your name?',[]);return;}
+  if(step==='name'){lead.name=raw;step='phone';ask('And your phone number, so our team can call you to confirm?',[]);return;}
+  if(step==='phone'){lead.phone=raw;step='day';ask('Which day would you prefer to visit?',[]);return;}
+  if(step==='day'){lead.day=raw;finishLead();return;}
+  if(t.indexOf('book')>-1||t.indexOf('appointment')>-1||t.indexOf('visit')>-1){step='service';ask('Sure — I can save your visit request. Which service is it for? For example: Scaling, Braces, Implants, HydraFacial or Botox.',[]);return;}
+  if(t.indexOf('service')>-1||t.indexOf('treatment')>-1||t.indexOf('offer')>-1){bot('We offer complete dental care — OPD check-up, scaling & polishing, fillings, root canal treatment, braces, dental implants, crowns & bridges, dentures and extractions — plus skin aesthetics: Botox & fillers, HydraFacial, PRP for hair and face, thread lift, microneedling and chemical peels.');setChips(['Book a visit','Our doctors','Treatment prices']);return;}
+  if(t.indexOf('doctor')>-1){bot('Our doctors are Dr. Ameer Shoaib (Maxillofacial Surgery & Dental Implants) and Dr. Areeba Shahid (Restorative Dentistry & Aesthetic Physician). Tell me your concern and I can suggest who it fits best.');setChips(['Book a visit','Our services']);return;}
+  if(t.indexOf('location')>-1||t.indexOf('address')>-1||t.indexOf('where')>-1||t.indexOf('saddar')>-1){bot('We are located at Jinnah Memorial Hospital, 2 Rashid Minhas Road, Saddar, Rawalpindi. You can also reach us at 0334 8533306.');setChips(['Book a visit','Our services']);return;}
+  if(t.indexOf('price')>-1||t.indexOf('cost')>-1||t.indexOf('fee')>-1||t.indexOf('charge')>-1){bot('We do not publish fixed prices here, because the right plan — and its cost — depends on examining you first. Share your concern and book a visit, and the team will confirm pricing when they call you.');setChips(['Book a visit','Our services']);return;}
+  if(t.indexOf('pain')>-1||t.indexOf('toothache')>-1||t.indexOf('hurt')>-1){bot('I am sorry you are in pain — I cannot diagnose, but I can help you get seen quickly. Our OPD accepts walk-ins with no appointment needed, or I can save a visit request and the team will call you to confirm. Which would you prefer?');setChips(['Book a visit','Visit & location']);return;}
+  if(t.indexOf('braces')>-1){bot('Yes, we offer braces for teeth alignment. The doctor will examine your teeth first and then explain the plan and duration. Would you like me to save a visit request?');setChips(['Book a visit','Treatment prices']);return;}
+  if(t.indexOf('implant')>-1){bot('Yes — Dr. Ameer Shoaib handles dental implants, a permanent, natural-feeling replacement for missing teeth. The plan is confirmed after an examination. Would you like to book a visit?');setChips(['Book a visit','Our doctors']);return;}
+  if(t.indexOf('hydrafacial')>-1||t.indexOf('facial')>-1){bot('Yes, we offer HydraFacial — deep cleansing and hydration for an instant glow. Would you like me to save a visit request for it?');setChips(['Book a visit','Our services']);return;}
+  if(t.indexOf('botox')>-1||t.indexOf('filler')>-1){bot('Yes, we offer Botox and fillers, planned by our aesthetic physician Dr. Areeba Shahid. The right option is decided after a consultation. Would you like to book a visit?');setChips(['Book a visit','Our doctors']);return;}
+  if(t.indexOf('hello')>-1||t.indexOf('hi')>-1||t.indexOf('salam')>-1){bot('Hello! How can I help — our services, our doctors, or booking a visit?');setChips(mainChips);return;}
+  bot('I do not have that answer yet, and I do not want to guess. Leave a visit request with your name and number and our team will call you back with the right answer.');setChips(['Book a visit','Our services','Visit & location']);
+}
+</script>
+</body>
+</html>
